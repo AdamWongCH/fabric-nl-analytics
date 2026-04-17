@@ -1,19 +1,24 @@
 # 🧠 Learning Guide — Ontology & Data Agent
 
-This guide explains **how to think**, not just what to click.
+This guide focuses on **how to think with data**, not just how to use the interface.
 
 ---
 
 # 🎯 The Big Idea
+
 Data → Ontology → Data Agent → Answers
 
-- Data = raw tables  
-- Ontology = meaning layer  
-- Agent = interface  
+- **Data** = raw tables  
+- **Ontology** = meaning layer  
+- **Data Agent** = interface  
+
+> The agent is only as smart as the ontology.
 
 ---
 
 # 🧱 From Data Model to Ontology
+
+You are not starting from scratch — you are translating a data model into meaning.
 
 | Data Model | Ontology |
 |----------|---------|
@@ -34,42 +39,89 @@ Data → Ontology → Data Agent → Answers
 ---
 
 # 🔗 Relationships = Meaning
-ResaleTransaction → located_at → Location
 
-ResaleTransaction → sold_in → SaleMonth
+ResaleTransaction → located_at → Location  
+ResaleTransaction → sold_in → SaleMonth  
 
-
-👉 Relationships must read like English
+👉 Relationships should read like natural language
 
 ---
 
-# 🧠 How the Agent Thinks
+# 🧠 How the Data Agent Works
+
+The agent does NOT “understand” like a human.
+
+It follows a structured process:
+
 Question → Map entities → Apply filters → Aggregate → Answer
 
 ---
 
-## Example
+# 🧠 Thinking Like the Agent
+
+When you ask a question, don’t treat it as free-form language.
+
+Break it into **three parts**:
+
+---
+
+## 1. What is the subject?
+
+Which entity are we querying?
+
+Example:
+- ResaleTransaction
+
+---
+
+## 2. What are the filters?
+
+What conditions apply?
+
+Example:
+- Tampines → Location.town  
+- January → SaleMonth  
+
+---
+
+## 3. What is the operation?
+
+Are we summarising or listing data?
+
+Example:
+- average → AVG(resale_price)
+
+---
+
+## Example Breakdown
 
 **Question:**
 > average resale price in Tampines in January
 
-**Mapping:**
-- Tampines → Location.town  
-- January → SaleMonth  
-- average → AVG(resale_price)
+**Thinking:**
+- Entity → ResaleTransaction  
+- Filters → town = TAMPINES, month = January  
+- Operation → AVG(resale_price)
+
+---
+
+👉 If a query fails, revisit these three parts.
 
 ---
 
 # ⚠️ Why Queries Fail
 
+Most failures are predictable.
+
+---
+
 ## 1. Mixing Detail + Summary
 
-Error:
-transaction_id not in GROUP BY
+**Error:**
+transaction_id not in GROUP BY  
 
-
-Cause:
-- mixing row-level + aggregated data
+**Cause:**
+- mixing row-level data with aggregated results  
 
 ---
 
@@ -81,54 +133,74 @@ Cause:
 ---
 
 ## 2. Case Sensitivity
-Tampines ≠ TAMPINES
 
+Tampines ≠ TAMPINES  
+
+👉 Fix:
+- normalize inputs
 
 ---
 
 ## 3. Missing Mapping
 
 Example:
-- "January" not mapped
+- "January" not mapped to SaleMonth  
+
+👉 The agent cannot interpret it
 
 ---
 
 # 🧩 Role of Instructions
 
-Instructions tell the agent:
+Instructions act as the **control layer**.
 
-- how to map  
-- how to aggregate  
-- what NOT to do  
+They tell the agent:
+- how to map business terms to data  
+- how to handle aggregation  
+- what NOT to include  
 
 ---
 
 ## Example
-price → resale_price
-Tampines → TAMPINES
-avg → AVG(resale_price)
-Do not include transaction_id in aggregated queries
 
+price → resale_price  
+Tampines → TAMPINES  
+avg → AVG(resale_price)  
+Do not include transaction_id in aggregated queries  
 
 ---
 
-# ⚠️ Limitations
+# ⚠️ Current Limitations
 
-- case sensitivity  
+Fabric IQ is still in preview.
+
+You may encounter:
+- case sensitivity issues  
 - multi-filter instability  
 - aggregation quirks  
 
-👉 This is normal (preview feature)
+👉 This is expected
 
 ---
 
 # 🎯 Key Takeaways
 
-- Ontology design matters  
-- Relationships define logic  
+- Ontology design shapes how the agent thinks  
+- Relationships define meaning  
 - Instructions guide behaviour  
-- Failures are part of learning  
+- Queries fail for logical reasons, not randomly  
+- Understanding the logic helps you debug effectively  
 
 ---
 
-👉 Next: go to the Lab Guide
+# 💬 Reflection
+
+Before moving to the lab, consider:
+
+- How would you break a question into entity, filters, and operation?  
+- Why might a query fail?  
+- What role do instructions play in guiding the agent?  
+
+---
+
+👉 Next: proceed to the **Lab Guide**
