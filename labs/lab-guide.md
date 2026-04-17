@@ -161,7 +161,7 @@ ResaleTransaction → sold_in → SaleMonth
 
 <img width="331" height="151" alt="image" src="https://github.com/user-attachments/assets/86e02b76-3a27-4f9d-8dbc-ee136bf94121" />
 
-<img width="741" height="247" alt="image" src="https://github.com/user-attachments/assets/29b71bd1-9d08-431d-aabe-fa25ef0f17f4" />
+<img width="310" height="248" alt="image" src="https://github.com/user-attachments/assets/5c36afa7-2cbe-4d01-83d7-2ead6aaaff46" />
 
 ---
 
