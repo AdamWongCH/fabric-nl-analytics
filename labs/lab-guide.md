@@ -105,7 +105,7 @@ By the end of this lab, you will have:
 
 1. Generate ontology from semantic model
 
-<img width="812" height="348" alt="image" src="https://github.com/user-attachments/assets/008edaa4-ba64-4fd0-a81d-baee7b2c51cf" />
+<img width="808" height="75" alt="image" src="https://github.com/user-attachments/assets/6d95e26a-ccb2-4b54-96e3-932fd07ef717" />
 
 2. Rename entities:
 
