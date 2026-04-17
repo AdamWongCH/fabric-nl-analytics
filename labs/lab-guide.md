@@ -100,7 +100,10 @@ By the end of this lab, you will have:
 
 ## Steps
 
-1. Generate ontology from semantic model  
+1. Generate ontology from semantic model
+
+<img width="812" height="348" alt="image" src="https://github.com/user-attachments/assets/008edaa4-ba64-4fd0-a81d-baee7b2c51cf" />
+
 2. Rename entities:
 
 | Table | Entity |
@@ -173,8 +176,6 @@ Entities:
 - ResaleTransaction = one HDB resale transaction
 - SaleMonth = transaction month and year
 - Location = region, town, street, block
-- Flat = flat type, flat model, storey range, floor area
-- Lease = lease attributes
 
 Mappings:
 - resale price, price, cost -> resale_price
@@ -186,10 +187,125 @@ Mappings:
 
 Rules:
 - Normalize town names to the stored format when needed.
-- For aggregated queries, do not return transaction_id, location_key, or any row-level identifier unless it is grouped.
 - For average price questions, return AVG(resale_price).
 - For count questions, return COUNT(ResaleTransaction).
 - For grouped summaries, return only grouped dimensions and aggregated measures.
 - For detail questions, return row-level identifiers and measures without aggregation.
 - Prefer business wording over technical column names.
 - Mention SGD for prices and sqm for area.
+
+
+---
+
+# 🟦 Lab 8 — Try Basic Queries
+
+Try:
+
+- average resale price in BEDOK  
+- number of transactions by town  
+- average resale price by month  
+
+---
+
+## Expected
+
+- queries should work  
+- results make sense  
+
+---
+
+# 🟦 Lab 9 — Break It (Important)
+
+Try:
+
+> average resale price in TAMPINES in January
+
+---
+
+## Expected
+
+👉 You may see an error
+
+---
+
+## 📸 Screenshot
+👉 Error message (GROUP BY / query failure)
+
+---
+
+# 🟦 Lab 10 — Debug It
+
+## Step 1 — Think like the agent
+
+Break it down:
+
+- Entity → ResaleTransaction  
+- Filters → town + month  
+- Operation → average  
+
+---
+
+## Step 2 — Identify problem
+
+Common issue:
+- mixing detail + summary  
+
+Error:
+transaction_id not in GROUP BY  
+
+---
+
+## Step 3 — Fix instructions
+
+Add in Rules:
+For aggregated queries, do not return transaction_id or any row-level identifier.
+
+
+---
+
+# 🟦 Lab 11 — Try Again
+
+Retry:
+
+> average resale price in TAMPINES in January  
+
+---
+
+## Expected
+
+👉 Improved or working result  
+
+---
+
+# 🧠 Reflection
+
+Think about:
+
+- What worked?  
+- What failed?  
+- Why did it fail?  
+- What did you change?  
+
+---
+
+# 🚀 Optional Challenge
+
+Try:
+ 
+- highest price town  
+- monthly trend for BEDOK  
+
+---
+
+# 🎯 Key Learning
+
+👉 The agent does not think for you  
+👉 You must structure the problem correctly  
+
+---
+
+# 📌 Notes
+
+- Fabric IQ is in preview  
+- Some behaviours may be inconsistent  
+- Debugging is part of the learning process  
