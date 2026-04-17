@@ -44,15 +44,7 @@ ResaleTransaction → sold_in → SaleMonth
 ---
 
 # 🧠 How the Agent Thinks
-Question
-↓
-Map entities
-↓
-Apply filters
-↓
-Aggregate
-↓
-Answer
+Question → Map entities → Apply filters → Aggregate → Answer
 
 ---
 
