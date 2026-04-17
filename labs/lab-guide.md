@@ -51,7 +51,10 @@ By the end of this lab, you will have:
 
 ## Steps
 
-1. Create a **semantic model** from the lakehouse  
+1. Create a **semantic model** from the lakehouse
+
+<img width="594" height="349" alt="image" src="https://github.com/user-attachments/assets/bab0c61f-02d9-45a6-ab94-3dd13964721a" />
+
 2. Include 3 tables
 - fact_resale_transaction  
 - dim_location  
