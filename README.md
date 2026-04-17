@@ -37,7 +37,7 @@ By the end, you will have:
 ---
 
 # 🧠 Key Concept
-
+Data → Ontology → Data Agent → Answers
 > The agent is only as smart as the ontology.
 
 ---
