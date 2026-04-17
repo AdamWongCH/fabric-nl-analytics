@@ -1,1 +1,1 @@
-This repository is for Fabric-related work
+This repository is for data agent related work on Fabric IQ
