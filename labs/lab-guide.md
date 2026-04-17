@@ -2,9 +2,9 @@
 
 This lab is designed for **learning by doing**.
 
-👉 You will build an ontology and data agent  
-👉 You will encounter errors  
-👉 You will debug them  
+- You will build an ontology and data agent  
+- You will encounter errors  
+- You will debug them  
 
 ---
 
