@@ -37,8 +37,16 @@ Think in layers:
 ## Steps
 
 1. Create a **Lakehouse**
+   
+<img width="259" height="149" alt="image" src="https://github.com/user-attachments/assets/105a0fce-88c0-45fb-bf1e-997ba42e381c" />
+
 2. Upload the CSV files from `/data/sample/`
+
+<img width="438" height="128" alt="image" src="https://github.com/user-attachments/assets/557ede38-3dc2-478b-9132-d3d7f90e99b5" />
+
 3. Convert each CSV into a **table**
+
+<img width="281" height="287" alt="image" src="https://github.com/user-attachments/assets/d803e33c-def0-44fa-973b-e400673e77f6" />
 
 ---
 
