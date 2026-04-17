@@ -376,8 +376,8 @@ Instructions control:
 Try:
 
 - average resale price in BEDOK  
-- number of transactions by town  
-- average resale price by month  
+- which town has the highest number of transactions  
+- compare Bedok and Tampines, which town is cheaper  
 
 ---
 
