@@ -19,6 +19,19 @@ By the end of this lab, you will have:
 
 ---
 
+# 🧠 How to Approach This Lab
+
+You are not just following steps.
+
+Think in layers:
+
+- **Keys** → define identity  
+- **Relationships** → define structure  
+- **Binding** → connects to data  
+- **Instructions** → control behaviour
+- 
+---
+
 # 🟦 Lab 1 — Load Data into Fabric
 
 ## Steps
@@ -40,10 +53,14 @@ By the end of this lab, you will have:
 ---
 
 ## 📸 Screenshot
-👉 Lakehouse view showing uploaded tables
+👉 Lakehouse showing all 5 tables loaded
 
 <img width="598" height="272" alt="image" src="https://github.com/user-attachments/assets/c7506eb8-268d-4d1c-8d4d-89a42caaec5b" />
 
+## Why this matters
+
+This is your **data foundation**.  
+Everything else depends on clean and structured tables.
 
 ---
 
@@ -70,13 +87,24 @@ By the end of this lab, you will have:
 ---
 
 ## 📸 Screenshot
-👉 Semantic model showing tables
+👉 Semantic model with tables
 
 <img width="398" height="152" alt="image" src="https://github.com/user-attachments/assets/c1b4119e-2928-4097-83e2-4f264297acbe" />
 
 ---
 
-# 🟦 Lab 3 — Define Relationships
+## Why this matters
+
+The semantic model defines:
+- data types  
+- relationships  
+- aggregation behaviour  
+
+👉 This is what the ontology builds on
+
+---
+
+# 🟦 Lab 3 — Define Relationships (Sementic Model)
 
 ## Create relationships
 
@@ -96,6 +124,14 @@ By the end of this lab, you will have:
 👉 Model view with relationships
 
 <img width="844" height="494" alt="image" src="https://github.com/user-attachments/assets/967c5f40-8dad-4e13-8615-24cc4f3ba6ed" />
+
+---
+
+## Why this matters
+
+This defines how tables connect:
+- fact → dimension  
+- enables filtering and aggregation
 
 ---
 
@@ -124,9 +160,65 @@ By the end of this lab, you will have:
 
 ---
 
-# 🟦 Lab 5 — Define Relationships in Ontology
+## Why this matters
 
-Create:
+Ontology translates:
+- technical tables → business concepts  
+
+👉 This is what the agent understands
+
+---
+
+# 🟦 Lab 5 — Define Keys
+
+Each entity must have a key that uniquely identifies it.
+
+---
+
+## Steps
+
+1. Open each entity  
+2. Identify the key property  
+3. Mark it as the key  
+
+---
+
+## Example
+
+ResaleTransaction:
+- transaction_id → key  
+
+Location:
+- location_key → key  
+
+SaleMonth:
+- date_key → key  
+
+---
+
+## 📸 Screenshot
+Entity properties showing key selection
+
+<img width="494" height="323" alt="image" src="https://github.com/user-attachments/assets/c5f3464e-c97a-4d5d-bfd6-bb1f8b81418a" />
+
+---
+
+## Why this matters
+
+Keys define **identity**.
+
+Without keys:
+- relationships break  
+- joins produce incorrect results  
+- the agent may generate invalid queries  
+
+---
+
+# 🟦 Lab 6 — Define Relationships (Ontology)
+
+👉 Relationships depend on correctly defined keys.
+
+## Create
 
 ResaleTransaction → located_at → Location  
 ResaleTransaction → sold_in → SaleMonth  
@@ -135,8 +227,8 @@ ResaleTransaction → sold_in → SaleMonth
 
 ## Check
 
-- Names read naturally  
-- Mapping is correct  
+- names read naturally  
+- mapping is correct  
 
 ---
 
@@ -147,7 +239,59 @@ ResaleTransaction → sold_in → SaleMonth
 
 ---
 
-# 🟦 Lab 6 — Create Data Agent
+## Why this matters
+
+Relationships define **meaning**:
+
+- how entities connect  
+- how questions are interpreted
+
+---
+
+# 🟦 Lab 7 — Bind Data to Ontology
+
+Binding links ontology properties to actual data columns.
+
+---
+
+## Two types of binding
+
+### 1. Property binding
+Example:
+- resale_price → fact_resale_transaction.resale_price  
+
+### 2. Relationship binding
+Example:
+- location_key = location_key  
+
+---
+
+## Steps
+
+1. Open each entity  
+2. Verify properties are mapped correctly  
+3. Ensure relationship keys align
+
+---
+
+## 📸 Screenshot
+Property binding screen
+
+<img width="335" height="308" alt="image" src="https://github.com/user-attachments/assets/9698fbc0-8f9f-44b5-bdb3-fba81ece654f" />
+
+---
+
+## Why this matters
+
+Without binding:
+- the agent cannot access real data  
+- queries may fail or return incorrect results  
+
+👉 If your agent does not work, check binding first
+
+---
+
+# 🟦 Lab 8 — Create Data Agent
 
 ## Steps
 
@@ -165,9 +309,18 @@ ResaleTransaction → sold_in → SaleMonth
 
 ---
 
-# 🟦 Lab 7 — Add Instructions
+## Why this matters
+
+The agent is the interface between:
+- user questions  
+- data  
+
+---
+
+# 🟦 Lab 9 — Add Instructions
 
 Copy and paste:
+
 You are a data agent that answers questions about Singapore housing resale transactions.
 
 Keep answers short, sharp, and concise.
@@ -197,10 +350,17 @@ Rules:
 - Prefer business wording over technical column names.
 - Mention SGD for prices and sqm for area.
 
-
 ---
 
-# 🟦 Lab 8 — Try Basic Queries
+## Why this matters
+
+Instructions control:
+- how the agent interprets questions  
+- how it constructs queries
+  
+---
+
+# 🟦 Lab 10 — Try Basic Queries
 
 Try:
 
@@ -217,7 +377,7 @@ Try:
 
 ---
 
-# 🟦 Lab 9 — Break It (Important)
+# 🟦 Lab 11 — Break It (Important)
 
 Try:
 
@@ -234,9 +394,21 @@ Try:
 ## 📸 Screenshot
 👉 Error message (GROUP BY / query failure)
 
+<img width="242" height="258" alt="image" src="https://github.com/user-attachments/assets/b3f62fa8-ce0b-48e5-8bcd-7d211c746afb" />
+  
 ---
 
-# 🟦 Lab 10 — Debug It
+## Why this matters
+
+This tests:
+- multi-filter logic  
+- aggregation behaviour
+
+👉 This causes invalid queries
+
+---
+
+# 🟦 Lab 12 — Debug It
 
 ## Step 1 — Think like the agent
 
@@ -266,7 +438,7 @@ For aggregated queries, do not return transaction_id or any row-level identifier
 
 ---
 
-# 🟦 Lab 11 — Try Again
+# 🟦 Lab 13 — Try Again
 
 Retry:
 
