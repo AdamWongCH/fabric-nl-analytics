@@ -72,6 +72,7 @@ Everything else depends on clean and structured tables.
 
 <img width="594" height="349" alt="image" src="https://github.com/user-attachments/assets/bab0c61f-02d9-45a6-ab94-3dd13964721a" />
 
+
 2. Include 3 tables
 - fact_resale_transaction  
 - dim_location  
