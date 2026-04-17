@@ -35,6 +35,7 @@ Data → Ontology → Data Agent → Answers
 
 # 🔗 Relationships = Meaning
 ResaleTransaction → located_at → Location
+
 ResaleTransaction → sold_in → SaleMonth
 
 
