@@ -318,7 +318,7 @@ The agent is the interface between:
 
 ---
 
-# Lab 9 — Add Instructions
+# Lab 9 — Add Agent Instructions
 
 Copy and paste:
 
