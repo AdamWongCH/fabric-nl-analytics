@@ -474,12 +474,26 @@ Think about:
 
 ---
 
-# Optional Challenge
+# Optional Challenge 1
 
 Try:
  
 - highest price town  
 - monthly trend for BEDOK  
+
+---
+
+# Optional Challenge 2
+
+Try:
+ 
+- Adding a new Flat entity
+- Defining Flat key
+- Creating relationship between Flat and ResaleTransaction
+- Binding Flat properties
+- Repeating Lab 4 to Lab 13
+
+<img width="994" height="473" alt="image" src="https://github.com/user-attachments/assets/2a7f4fc0-ab42-4023-b0fd-2165b5b323f3" />
 
 ---
 
