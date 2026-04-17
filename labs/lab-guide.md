@@ -1,4 +1,4 @@
-# 🧪 Lab Guide — Build & Debug a Data Agent
+# Lab Guide — Build & Debug a Data Agent
 
 This lab is designed for **learning by doing**.
 
@@ -8,7 +8,7 @@ This lab is designed for **learning by doing**.
 
 ---
 
-# 🎯 Goal
+# Goal
 
 By the end of this lab, you will have:
 
