@@ -72,7 +72,7 @@ By the end of this lab, you will have:
 ## 📸 Screenshot
 👉 Semantic model showing tables
 
-<img width="602" height="308" alt="image" src="https://github.com/user-attachments/assets/4610f1d8-faf6-4612-94bb-ed928e2e2ca7" />
+<img width="398" height="152" alt="image" src="https://github.com/user-attachments/assets/c1b4119e-2928-4097-83e2-4f264297acbe" />
 
 ---
 
