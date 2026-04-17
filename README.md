@@ -2,7 +2,7 @@
 
 Build your first **Ontology** and **Data Agent** using Microsoft Fabric.
 
-This repository is a **hands-on learning experience** to help you:
+This repository is a **hands-on learning experience** for colleagues to:
 - understand how data agents work
 - build an ontology from a data model
 - create and debug a data agent
@@ -10,40 +10,27 @@ This repository is a **hands-on learning experience** to help you:
 
 ---
 
-# 🚀 Start Here (Recommended Flow)
+# 🚀 Start Here
 
-1. Read the **Learning Guide**  
-   👉 [`/docs/learning-guide.md`](./docs/learning-guide.md)
+Follow this sequence:
 
-2. Complete the **Hands-on Lab**  
-   👉 [`/labs/lab-guide.md`](./labs/lab-guide.md)
+1. 📖 Read the Learning Guide  
+   👉 `/docs/learning-guide.md`
 
-3. Use the **Sample Dataset**  
-   👉 [`/data/sample/`](./data/sample/)
+2. 🧪 Complete the Hands-on Lab  
+   👉 `/labs/lab-guide.md`
 
----
-
-# 📦 Dataset
-
-Sample dataset is provided for this exercise:
-
-- `fact_resale_transaction.csv`
-- `dim_location.csv`
-- `dim_date.csv`
-- `dim_flat.csv`
-- `dim_lease.csv`
-
-👉 Download from: [`/data/sample/`](./data/sample/)
+3. 📦 Download the Dataset  
+   👉 `/data/sample/`
 
 ---
 
 # 🧱 What You Will Build
 
-By the end of this exercise, you will have:
-
-- a **semantic model**
-- an **ontology**
-- a **data agent**
+By the end, you will have:
+- a semantic model  
+- an ontology  
+- a data agent  
 
 👉 This enables **self-service analytics using natural language**
 
@@ -51,5 +38,28 @@ By the end of this exercise, you will have:
 
 # 🧠 Key Concept
 
-```text
-Data → Ontology → Data Agent → Answers
+> The agent is only as smart as the ontology.
+
+---
+
+# ⚠️ Important
+
+This is a **learning setup**:
+- Fabric IQ is in preview  
+- Some queries may fail  
+- Debugging is part of the learning  
+
+---
+
+# 💬 Reflection
+
+- What worked?  
+- What failed?  
+- Why did it fail?  
+- What did you change?  
+
+---
+
+# 📌 Notes
+
+- Dataset is for training only  
