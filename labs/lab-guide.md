@@ -41,6 +41,7 @@ By the end of this lab, you will have:
 
 ## 📸 Screenshot
 👉 Lakehouse view showing uploaded tables
+
 <img width="598" height="272" alt="image" src="https://github.com/user-attachments/assets/c7506eb8-268d-4d1c-8d4d-89a42caaec5b" />
 
 
@@ -51,7 +52,10 @@ By the end of this lab, you will have:
 ## Steps
 
 1. Create a **semantic model** from the lakehouse  
-2. Include all 5 tables  
+2. Include 3 tables
+- fact_resale_transaction  
+- dim_location  
+- dim_date  
 
 ---
 
@@ -65,6 +69,8 @@ By the end of this lab, you will have:
 ## 📸 Screenshot
 👉 Semantic model showing tables
 
+<img width="602" height="308" alt="image" src="https://github.com/user-attachments/assets/4610f1d8-faf6-4612-94bb-ed928e2e2ca7" />
+
 ---
 
 # 🟦 Lab 3 — Define Relationships
@@ -72,9 +78,7 @@ By the end of this lab, you will have:
 ## Create relationships
 
 - fact_resale_transaction → dim_location (location_key)  
-- fact_resale_transaction → dim_date (date_key)  
-- fact_resale_transaction → dim_flat (flat_key)  
-- fact_resale_transaction → dim_lease (lease_key)  
+- fact_resale_transaction → dim_date (date_key)   
 
 ---
 
@@ -87,6 +91,8 @@ By the end of this lab, you will have:
 
 ## 📸 Screenshot
 👉 Model view with relationships
+
+<img width="844" height="494" alt="image" src="https://github.com/user-attachments/assets/967c5f40-8dad-4e13-8615-24cc4f3ba6ed" />
 
 ---
 
@@ -107,6 +113,8 @@ By the end of this lab, you will have:
 
 ## 📸 Screenshot
 👉 Ontology entity list
+
+<img width="863" height="434" alt="image" src="https://github.com/user-attachments/assets/64d89439-7dbc-434e-ae74-ec35288b9731" />
 
 ---
 
@@ -129,6 +137,8 @@ ResaleTransaction → sold_in → SaleMonth
 ## 📸 Screenshot
 👉 Ontology relationship configuration
 
+<img width="995" height="550" alt="image" src="https://github.com/user-attachments/assets/f53439b7-4e66-4571-944f-e01de88f6ae4" />
+
 ---
 
 # 🟦 Lab 6 — Create Data Agent
@@ -143,8 +153,43 @@ ResaleTransaction → sold_in → SaleMonth
 ## 📸 Screenshot
 👉 Data agent setup screen
 
+<img width="331" height="151" alt="image" src="https://github.com/user-attachments/assets/86e02b76-3a27-4f9d-8dbc-ee136bf94121" />
+
+<img width="741" height="247" alt="image" src="https://github.com/user-attachments/assets/29b71bd1-9d08-431d-aabe-fa25ef0f17f4" />
+
 ---
 
 # 🟦 Lab 7 — Add Instructions
 
 Copy and paste:
+You are a data agent that answers questions about Singapore housing resale transactions.
+
+Keep answers short, sharp, and concise.
+Use only data from HousingResaleOntology.
+Do not use outside knowledge.
+Support group by in GQL.
+
+Entities:
+- ResaleTransaction = one HDB resale transaction
+- SaleMonth = transaction month and year
+- Location = region, town, street, block
+- Flat = flat type, flat model, storey range, floor area
+- Lease = lease attributes
+
+Mappings:
+- resale price, price, cost -> resale_price
+- price per sqm -> price_per_sqm
+- town -> Location.town
+- region -> Location.region
+- month -> SaleMonth.month_name
+- year -> SaleMonth.sale_year
+
+Rules:
+- Normalize town names to the stored format when needed.
+- For aggregated queries, do not return transaction_id, location_key, or any row-level identifier unless it is grouped.
+- For average price questions, return AVG(resale_price).
+- For count questions, return COUNT(ResaleTransaction).
+- For grouped summaries, return only grouped dimensions and aggregated measures.
+- For detail questions, return row-level identifiers and measures without aggregation.
+- Prefer business wording over technical column names.
+- Mention SGD for prices and sqm for area.
