@@ -29,7 +29,7 @@ Think in layers:
 - **Relationships** → define structure  
 - **Binding** → connects to data  
 - **Instructions** → control behaviour
-- 
+
 ---
 
 # Lab 1 — Load Data into Fabric
