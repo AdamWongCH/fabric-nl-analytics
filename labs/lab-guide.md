@@ -481,6 +481,8 @@ Try more queries:
 - highest price town  
 - monthly trend for BEDOK  
 
+Are the answers correct? If not, how would you resolve?
+
 ---
 
 # Optional Challenge 2
