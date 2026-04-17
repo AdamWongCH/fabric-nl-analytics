@@ -382,7 +382,7 @@ Try:
 
 Try:
 
-> average resale price in TAMPINES in January
+> average resale price in BEDOK in January
 
 ---
 
@@ -443,7 +443,7 @@ For aggregated queries, do not return transaction_id or any row-level identifier
 
 Retry:
 
-> average resale price in TAMPINES in January  
+> average resale price in BEDOK in January  
 
 ---
 
