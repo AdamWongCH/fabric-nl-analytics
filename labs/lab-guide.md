@@ -1,6 +1,6 @@
 # Lab Guide — Build & Debug a Data Agent
 
-This lab is designed for **learning by doing**.
+This lab is designed for **learning by doing**. You are expected to need about 1 hour (or more) to complete the lab.
 
 - You will build an ontology and data agent  
 - You will encounter errors  
