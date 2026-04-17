@@ -203,4 +203,10 @@ Before moving to the lab, consider:
 
 ---
 
-👉 Next: proceed to the **Lab Guide**
+# 🚀 Next Step
+
+Understanding comes from trying — and breaking things.
+
+Now proceed to the Lab Guide and build your first ontology and data agent.
+
+👉 `/labs/lab-guide.md`
