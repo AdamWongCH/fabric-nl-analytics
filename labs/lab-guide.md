@@ -476,7 +476,7 @@ Think about:
 
 # Optional Challenge 1
 
-Try:
+Try more queries:
  
 - highest price town  
 - monthly trend for BEDOK  
@@ -485,7 +485,7 @@ Try:
 
 # Optional Challenge 2
 
-Try:
+Try enriching the ontology:
  
 - Adding a new Flat entity
 - Defining Flat key
