@@ -19,7 +19,7 @@ By the end of this lab, you will have:
 
 ---
 
-# 🧠 How to Approach This Lab
+# How to Approach This Lab
 
 You are not just following steps.
 
@@ -32,7 +32,7 @@ Think in layers:
 - 
 ---
 
-# 🟦 Lab 1 — Load Data into Fabric
+# Lab 1 — Load Data into Fabric
 
 ## Steps
 
@@ -52,8 +52,8 @@ Think in layers:
 
 ---
 
-## 📸 Screenshot
-👉 Lakehouse showing all 5 tables loaded
+## Screenshot
+Lakehouse showing all 5 tables loaded
 
 <img width="598" height="272" alt="image" src="https://github.com/user-attachments/assets/c7506eb8-268d-4d1c-8d4d-89a42caaec5b" />
 
@@ -64,7 +64,7 @@ Everything else depends on clean and structured tables.
 
 ---
 
-# 🟦 Lab 2 — Create Semantic Model
+# Lab 2 — Create Semantic Model
 
 ## Steps
 
@@ -86,8 +86,8 @@ Everything else depends on clean and structured tables.
 
 ---
 
-## 📸 Screenshot
-👉 Semantic model with tables
+## Screenshot
+Semantic model with tables
 
 <img width="398" height="152" alt="image" src="https://github.com/user-attachments/assets/c1b4119e-2928-4097-83e2-4f264297acbe" />
 
@@ -100,11 +100,11 @@ The semantic model defines:
 - relationships  
 - aggregation behaviour  
 
-👉 This is what the ontology builds on
+This is what the ontology builds on
 
 ---
 
-# 🟦 Lab 3 — Define Relationships (Sementic Model)
+# Lab 3 — Define Relationships (Sementic Model)
 
 ## Create relationships
 
@@ -120,8 +120,8 @@ The semantic model defines:
 
 ---
 
-## 📸 Screenshot
-👉 Model view with relationships
+## Screenshot
+Model view with relationships
 
 <img width="844" height="494" alt="image" src="https://github.com/user-attachments/assets/967c5f40-8dad-4e13-8615-24cc4f3ba6ed" />
 
@@ -135,7 +135,7 @@ This defines how tables connect:
 
 ---
 
-# 🟦 Lab 4 — Generate Ontology
+# Lab 4 — Generate Ontology
 
 ## Steps
 
@@ -153,8 +153,8 @@ This defines how tables connect:
 
 ---
 
-## 📸 Screenshot
-👉 Ontology entity list
+## Screenshot
+Ontology entity list
 
 <img width="863" height="434" alt="image" src="https://github.com/user-attachments/assets/64d89439-7dbc-434e-ae74-ec35288b9731" />
 
@@ -165,11 +165,11 @@ This defines how tables connect:
 Ontology translates:
 - technical tables → business concepts  
 
-👉 This is what the agent understands
+This is what the agent understands
 
 ---
 
-# 🟦 Lab 5 — Define Keys
+# Lab 5 — Define Keys
 
 Each entity must have a key that uniquely identifies it.
 
@@ -196,7 +196,7 @@ SaleMonth:
 
 ---
 
-## 📸 Screenshot
+## Screenshot
 Entity properties showing key selection
 
 <img width="494" height="323" alt="image" src="https://github.com/user-attachments/assets/c5f3464e-c97a-4d5d-bfd6-bb1f8b81418a" />
@@ -214,9 +214,9 @@ Without keys:
 
 ---
 
-# 🟦 Lab 6 — Define Relationships (Ontology)
+# Lab 6 — Define Relationships (Ontology)
 
-👉 Relationships depend on correctly defined keys.
+Relationships depend on correctly defined keys.
 
 ## Create
 
@@ -232,8 +232,8 @@ ResaleTransaction → sold_in → SaleMonth
 
 ---
 
-## 📸 Screenshot
-👉 Ontology relationship configuration
+## Screenshot
+Ontology relationship configuration
 
 <img width="995" height="550" alt="image" src="https://github.com/user-attachments/assets/f53439b7-4e66-4571-944f-e01de88f6ae4" />
 
@@ -248,7 +248,7 @@ Relationships define **meaning**:
 
 ---
 
-# 🟦 Lab 7 — Bind Data to Ontology
+# Lab 7 — Bind Data to Ontology
 
 Binding links ontology properties to actual data columns.
 
@@ -274,7 +274,7 @@ Example:
 
 ---
 
-## 📸 Screenshot
+## Screenshot
 Property binding screen
 
 <img width="335" height="308" alt="image" src="https://github.com/user-attachments/assets/9698fbc0-8f9f-44b5-bdb3-fba81ece654f" />
@@ -287,11 +287,11 @@ Without binding:
 - the agent cannot access real data  
 - queries may fail or return incorrect results  
 
-👉 If your agent does not work, check binding first
+If your agent does not work, check binding first
 
 ---
 
-# 🟦 Lab 8 — Create Data Agent
+# Lab 8 — Create Data Agent
 
 ## Steps
 
@@ -300,8 +300,8 @@ Without binding:
 
 ---
 
-## 📸 Screenshot
-👉 Data agent setup screen
+## Screenshot
+Data agent setup screen
 
 <img width="331" height="151" alt="image" src="https://github.com/user-attachments/assets/86e02b76-3a27-4f9d-8dbc-ee136bf94121" />
 
@@ -317,7 +317,7 @@ The agent is the interface between:
 
 ---
 
-# 🟦 Lab 9 — Add Instructions
+# Lab 9 — Add Instructions
 
 Copy and paste:
 
@@ -360,7 +360,7 @@ Instructions control:
   
 ---
 
-# 🟦 Lab 10 — Try Basic Queries
+# Lab 10 — Try Basic Queries
 
 Try:
 
@@ -377,7 +377,7 @@ Try:
 
 ---
 
-# 🟦 Lab 11 — Break It (Important)
+# Lab 11 — Break It (Important)
 
 Try:
 
@@ -387,12 +387,12 @@ Try:
 
 ## Expected
 
-👉 You may see an error
+You may see an error
 
 ---
 
-## 📸 Screenshot
-👉 Error message (GROUP BY / query failure)
+## Screenshot
+Error message (GROUP BY / query failure)
 
 <img width="242" height="258" alt="image" src="https://github.com/user-attachments/assets/b3f62fa8-ce0b-48e5-8bcd-7d211c746afb" />
   
@@ -404,11 +404,11 @@ This tests:
 - multi-filter logic  
 - aggregation behaviour
 
-👉 This causes invalid queries
+This causes invalid queries
 
 ---
 
-# 🟦 Lab 12 — Debug It
+# Lab 12 — Debug It
 
 ## Step 1 — Think like the agent
 
@@ -438,7 +438,7 @@ For aggregated queries, do not return transaction_id or any row-level identifier
 
 ---
 
-# 🟦 Lab 13 — Try Again
+# Lab 13 — Try Again
 
 Retry:
 
@@ -448,11 +448,11 @@ Retry:
 
 ## Expected
 
-👉 Improved or working result  
+Improved or working result  
 
 ---
 
-# 🧠 Reflection
+# Reflection
 
 Think about:
 
@@ -463,7 +463,7 @@ Think about:
 
 ---
 
-# 🚀 Optional Challenge
+# Optional Challenge
 
 Try:
  
@@ -472,14 +472,14 @@ Try:
 
 ---
 
-# 🎯 Key Learning
+# Key Learning
 
-👉 The agent does not think for you  
-👉 You must structure the problem correctly  
+- The agent does not think for you  
+- You must structure the problem correctly  
 
 ---
 
-# 📌 Notes
+# Notes
 
 - Fabric IQ is in preview  
 - Some behaviours may be inconsistent  
