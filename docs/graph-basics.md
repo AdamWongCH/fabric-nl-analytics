@@ -7,7 +7,7 @@ You only need to understand how data connects
 
 ---
 
-# Why This Matters
+## Why This Matters
 
 In this course, you are not just querying tables.
 
@@ -17,9 +17,9 @@ This structure is what enables AI to reason over data.
 
 ---
 
-# Core Concepts
+## Core Concepts
 
-## Entity (Node)
+### Entity (Node)
 
 An entity represents a thing.
 
@@ -34,7 +34,7 @@ Examples:
 
 ---
 
-## Relationship (Edge)
+### Relationship (Edge)
 
 A relationship connects two entities.
 
@@ -45,12 +45,12 @@ Think:
 Example:
 ResaleTransaction → located_at → Location
 
-Read it as:
+Read it as:  
 “A transaction is located at a location”
 
 ---
 
-## Direction Matters
+### Direction Matters
 
 Relationships are **directional**.
 ResaleTransaction → Location
@@ -62,7 +62,7 @@ Direction helps define meaning
 
 ---
 
-## Property
+### Property
 
 A property is data attached to an entity.
 
@@ -76,9 +76,9 @@ Examples:
 
 ---
 
-# Thinking in Graphs vs Tables
+## Thinking in Graphs vs Tables
 
-## Table Thinking
+### Table Thinking
 
 - tables  
 - joins  
@@ -87,7 +87,7 @@ Examples:
 
 ---
 
-## Graph Thinking
+### Graph Thinking
 
 - entities  
 - relationships  
@@ -97,24 +97,14 @@ You are querying **connections**, not just data
 
 ---
 
-# Patterns in GQL
+## Patterns in GQL
 
 Instead of writing joins, you describe patterns:
 
-```gql id="zv1r3x"
+```gql
 MATCH (t:ResaleTransaction)-[:located_at]->(l:Location)
 RETURN t, l
 
 This means:
 - find transactions
 - connected to locations
-
----
-
-Basic Query Flow
-
-Most queries follow this flow:
-
-MATCH → find pattern
-FILTER → apply condition
-RETURN → show result
