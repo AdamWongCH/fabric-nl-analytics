@@ -140,3 +140,13 @@ GQL follows relationships.
 
 This is why ontology matters — it defines those relationships
 
+---
+
+## Next Step
+
+Learning is best done through building — and discovering where your structure breaks 😄
+
+Go to the lab:  
+[`/labs/lab-guide.md`](../labs/lab-guide.md)
+
+
