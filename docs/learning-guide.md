@@ -2,8 +2,8 @@
 
 This guide explains how to think about ontology and data agents.
 
-You are not just following steps  
-You are learning how data is structured so AI can reason over it  
+You are not just following steps.  
+You are learning how data is structured so AI can reason over it.  
 
 ---
 
@@ -15,7 +15,7 @@ Data → Semantic Model → Ontology → Data Agent → Answer
 - Ontology = meaning  
 - Data Agent = interface  
 
-Better structure leads to better answers  
+Better structure leads to better answers.  
 
 ---
 
@@ -70,8 +70,8 @@ These concepts are related but serve different purposes.
 Example:
 Flat Type → 3-Room → 4-Room → 5-Room  
 
-Good for organisation  
-Not good for querying relationships  
+Good for organisation.  
+Not good for querying relationships.  
 
 ---
 
@@ -80,8 +80,8 @@ Not good for querying relationships
 - structured storage  
 - tables and joins  
 
-Good for SQL queries  
-Meaning is not explicit  
+Good for SQL queries.  
+Meaning is not explicit.  
 
 ---
 
@@ -115,8 +115,8 @@ Example of a SQL join:
 
 <img width="253" height="64" alt="image" src="https://github.com/user-attachments/assets/207dfe67-ac63-43a0-9793-eccc1330cab6" />
 </br>
-Tables are connected using join conditions  
-You manually specify how data links together  
+Tables are connected using join conditions.  
+You manually specify how data links together.  
 
 ---
 
@@ -128,15 +128,15 @@ Example of a GQL pattern:
 
 <img width="274" height="40" alt="image" src="https://github.com/user-attachments/assets/00407937-e594-4be2-839c-a232933cc144" />
 </br>
-Instead of joins, you describe how things connect  
-The structure defines the relationships  
+Instead of joins, you describe how things connect.  
+The structure defines the relationships.  
 
 ---
 
 ## Key Difference
 
-SQL connects tables  
-GQL follows relationships  
+SQL connects tables.  
+GQL follows relationships.  
 
 This is why ontology matters — it defines those relationships
 
