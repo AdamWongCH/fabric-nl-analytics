@@ -18,6 +18,9 @@ You will learn how data is transformed from raw tables into meaningful structure
 
 # Start Here
 
+Estimated time: 1 hour 20 mins
+(5 min concepts, 10 min thinking, 1 hour lab, 5 min reflection)
+
 Follow this sequence:
 
 1. Understand basic graph concepts *(optional but helpful)*  
