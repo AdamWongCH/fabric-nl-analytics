@@ -111,70 +111,10 @@ This means:
 
 ---
 
-# Basic Query Flow
+Basic Query Flow
 
 Most queries follow this flow:
 
-- MATCH → find pattern  
-- FILTER → apply condition  
-- RETURN → show result  
-
----
-
-## Example
-
-```gql
-MATCH (t:ResaleTransaction)-[:located_at]->(l:Location)
-FILTER l.town = 'BEDOK'
-RETURN AVG(t.resale_price)
-
-Instead of joins, you describe how things connect
-
----
-
-# Is This a Knowledge Graph?
-
-Yes — in this exercise, you are building a simple **knowledge graph**.
-
-It consists of:
-
-- entities (things)  
-- relationships (connections)  
-- properties (data)  
-
-Together, they form structured knowledge
-
----
-
-# Important Reminder
-
-Graph structure alone is not enough.
-
-You still need:
-
-- correct keys  
-- correct relationships  
-- correct binding  
-- clear instructions  
-
-Structure must be correct for queries to work
-
----
-
-# Key Takeaways
-
-- Entity = node  
-- Relationship = connection  
-- Property = data  
-- GQL queries patterns, not tables  
-- Relationships are directional  
-
-Graph structure enables the system to understand connections
-
----
-
-# Next Step
-
-Proceed to the Learning Guide  
-[`/docs/learning-guide.md`](./learning-guide.md)
-
+MATCH → find pattern
+FILTER → apply condition
+RETURN → show result
