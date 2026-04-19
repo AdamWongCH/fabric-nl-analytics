@@ -128,7 +128,7 @@ Example of a GQL pattern:
 
 <img width="274" height="40" alt="image" src="https://github.com/user-attachments/assets/00407937-e594-4be2-839c-a232933cc144" />
 </br>
-Instead of joins, you describe **how things connect**  
+Instead of joins, you describe how things connect  
 The structure defines the relationships  
 
 ---
