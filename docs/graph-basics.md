@@ -97,11 +97,10 @@ You are querying **connections**, not just data
 
 ---
 
-## 🔗 Patterns in GQL
+## Patterns in GQL
 
 Instead of writing joins, you describe patterns.
 
-## 📸 Screenshot
 Example of a basic GQL pattern:
 
 <img width="253" height="41" alt="image" src="https://github.com/user-attachments/assets/d29b8499-f201-4710-965c-82cf31f9e289" />
@@ -122,7 +121,6 @@ Most queries follow this flow:
 
 ---
 
-## 📸 Screenshot
 Example of a query with filter and aggregation:
 
 <img width="255" height="35" alt="image" src="https://github.com/user-attachments/assets/b7695149-ace3-48f1-b794-7b1c079de48d" />
