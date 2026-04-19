@@ -97,15 +97,82 @@ You are querying **connections**, not just data
 
 ---
 
-## Patterns in GQL
+## 🔗 Patterns in GQL
 
-Instead of writing joins, you describe patterns:
+Instead of writing joins, you describe patterns.
 
-```gql
-MATCH (t:ResaleTransaction)-[:located_at]->(l:Location)
-RETURN t, l
+## 📸 Screenshot
+Example of a basic GQL pattern:
+
+<img width="253" height="41" alt="image" src="https://github.com/user-attachments/assets/d29b8499-f201-4710-965c-82cf31f9e289" />
 
 This means:
+- find transactions  
+- connected to locations  
 
-find transactions
-connected to locations
+---
+
+## Basic Query Flow
+
+Most queries follow this flow:
+
+- MATCH → find pattern  
+- FILTER → apply condition  
+- RETURN → show result  
+
+---
+
+## 📸 Screenshot
+Example of a query with filter and aggregation:
+
+<img width="255" height="35" alt="image" src="https://github.com/user-attachments/assets/b7695149-ace3-48f1-b794-7b1c079de48d" />
+
+Instead of joins, you describe **how things connect**
+
+---
+
+## Is This a Knowledge Graph?
+
+Yes — in this exercise, you are building a simple **knowledge graph**.
+
+It consists of:
+
+- entities (things)  
+- relationships (connections)  
+- properties (data)  
+
+Together, they form structured knowledge
+
+---
+
+## Important Reminder
+
+Graph structure alone is not enough.
+
+You still need:
+
+- correct keys  
+- correct relationships  
+- correct binding  
+- clear instructions  
+
+Structure must be correct for queries to work
+
+---
+
+## Key Takeaways
+
+- Entity = node  
+- Relationship = connection  
+- Property = data  
+- GQL queries patterns, not tables  
+- Relationships are directional  
+
+Graph structure enables the system to understand connections
+
+---
+
+## Next Step
+
+Proceed to the Learning Guide  
+[`/docs/learning-guide.md`](./learning-guide.md)
