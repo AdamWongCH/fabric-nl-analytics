@@ -126,7 +126,7 @@ Most queries follow this flow:
 Example of a query with filter and aggregation:
 
 <img width="255" height="35" alt="image" src="https://github.com/user-attachments/assets/b7695149-ace3-48f1-b794-7b1c079de48d" />
-
+<br>
 Instead of joins, you describe **how things connect**
 
 ---
