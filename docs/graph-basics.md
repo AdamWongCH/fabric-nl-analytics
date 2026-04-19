@@ -106,5 +106,6 @@ MATCH (t:ResaleTransaction)-[:located_at]->(l:Location)
 RETURN t, l
 
 This means:
-- find transactions
-- connected to locations
+
+find transactions
+connected to locations
