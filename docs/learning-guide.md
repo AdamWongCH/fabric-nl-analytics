@@ -142,11 +142,157 @@ This is why ontology matters — it defines those relationships
 
 ---
 
+## Thinking Like the Agent
+
+Every question can be broken into 3 parts:
+
+---
+
+### 1. Entity (What are we querying?)
+
+Example:
+- ResaleTransaction  
+
+---
+
+### 2. Filters (What conditions apply?)
+
+Example:
+- town = TAMPINES  
+- month = January  
+
+---
+
+### 3. Operation (What do we want?)
+
+Example:
+- average → AVG(resale_price)  
+
+---
+
+## Example
+
+**Question:**
+> average resale price in Tampines in January  
+
+**Breakdown:**
+
+- Entity → ResaleTransaction  
+- Filters → Location.town, SaleMonth  
+- Operation → AVG(resale_price)  
+
+---
+
+If a query fails, revisit these three parts
+
+---
+
+## Why Queries Fail
+
+Most issues are logical, not technical.
+
+---
+
+### 1️. Mixing Detail + Summary
+
+Example:
+- transaction_id + AVG(resale_price)  
+
+Not valid  
+
+Rule:
+- Summary → aggregates only  
+- Detail → row-level only  
+
+---
+
+### 2️. Case Mismatch
+
+Example:
+- Tampines ≠ TAMPINES  
+
+Fix:
+- standardise values  
+
+---
+
+### 3️. Missing Mapping
+
+Example:
+- "January" not mapped  
+
+ The agent cannot interpret it  
+
+---
+
+## How the System Works
+
+There are **two layers** that enable the agent:
+
+---
+
+### Structure (Ontology)
+
+Defines:
+- entities  
+- relationships  
+- properties  
+- keys  
+
+This defines what the data *means*
+
+---
+
+### Behaviour (Instructions)
+
+Defines:
+- how the agent interprets questions  
+- how terms are mapped  
+- how queries are constructed  
+
+This defines how the agent *behaves*
+
+---
+
+## Key Insight
+
+Ontology defines structure  
+Instructions define behaviour  
+
+Together, they enable the system to reason over data  
+
+---
+
+## First Success
+
+Try this simple query first:
+
+> average resale price in BEDOK  
+
+This confirms your setup is working  
+
+---
+
+## What Happens Behind the Scenes
+User question → Agent maps entities and filters → Agent generates query → Query runs on data → Result is returned
+
+The agent is structured, not guessing  
+
+---
+
+## Key Takeaways
+
+- Ontology translates data into meaning  
+- Relationships define connections  
+- Instructions guide behaviour  
+- Structure determines whether the agent works  
+
+---
+
 ## Next Step
 
 Learning is best done through building 😄
 
 Go to the lab:  
 [`/labs/lab-guide.md`](../labs/lab-guide.md)
-
 
