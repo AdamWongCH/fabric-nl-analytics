@@ -41,11 +41,11 @@ Think in layers:
 1. Create a **Lakehouse**
    
 <img width="259" height="149" alt="image" src="https://github.com/user-attachments/assets/105a0fce-88c0-45fb-bf1e-997ba42e381c" />
-
+</br>
 2. Upload the CSV files from `/data/sample/`
 
 <img width="438" height="128" alt="image" src="https://github.com/user-attachments/assets/557ede38-3dc2-478b-9132-d3d7f90e99b5" />
-
+</br>
 3. Convert each CSV into a **table**
 
 <img width="281" height="287" alt="image" src="https://github.com/user-attachments/assets/d803e33c-def0-44fa-973b-e400673e77f6" />
@@ -81,8 +81,7 @@ Everything else depends on clean and structured tables.
 1. Create a **semantic model** from the lakehouse
 
 <img width="594" height="349" alt="image" src="https://github.com/user-attachments/assets/bab0c61f-02d9-45a6-ab94-3dd13964721a" />
-
-
+</br>
 2. Include 3 tables
 - fact_resale_transaction  
 - dim_location  
@@ -153,7 +152,7 @@ This defines how tables connect:
 1. Generate ontology from semantic model
 
 <img width="808" height="75" alt="image" src="https://github.com/user-attachments/assets/6d95e26a-ccb2-4b54-96e3-932fd07ef717" />
-
+</br>
 2. Rename entities:
 
 | Table | Entity |
@@ -315,7 +314,7 @@ If your agent does not work, check binding first
 Data agent setup screen
 
 <img width="331" height="151" alt="image" src="https://github.com/user-attachments/assets/86e02b76-3a27-4f9d-8dbc-ee136bf94121" />
-
+</br>
 <img width="310" height="248" alt="image" src="https://github.com/user-attachments/assets/5c36afa7-2cbe-4d01-83d7-2ead6aaaff46" />
 
 ---
