@@ -39,7 +39,7 @@ Think in layers:
 ## Steps
 </br>
 1. Create a **Lakehouse**
-</br>
+
 <img width="259" height="149" alt="image" src="https://github.com/user-attachments/assets/105a0fce-88c0-45fb-bf1e-997ba42e381c" />
 </br>
 2. Upload the CSV files from `/data/sample/`
