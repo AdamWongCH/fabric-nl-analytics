@@ -77,7 +77,7 @@ Everything else depends on clean and structured tables.
 # Lab 2 — Create Semantic Model
 
 ## Steps
-
+</br>
 1. Create a **semantic model** from the lakehouse
 
 <img width="594" height="349" alt="image" src="https://github.com/user-attachments/assets/bab0c61f-02d9-45a6-ab94-3dd13964721a" />
@@ -148,7 +148,7 @@ This defines how tables connect:
 # Lab 4 — Generate Ontology
 
 ## Steps
-
+</br>
 1. Generate ontology from semantic model
 
 <img width="808" height="75" alt="image" src="https://github.com/user-attachments/assets/6d95e26a-ccb2-4b54-96e3-932fd07ef717" />
