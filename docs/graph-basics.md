@@ -43,7 +43,6 @@ Think:
 - edge (in graph)
 
 Example:
-
 ResaleTransaction → located_at → Location
 
 Read it as:  
