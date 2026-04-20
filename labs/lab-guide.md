@@ -420,7 +420,7 @@ This causes invalid queries
 
 # Lab 12 — Debug It
 
-## Step 1 — Think like the agent
+Step 1 — Think like the agent
 
 Break it down:
 
@@ -430,7 +430,7 @@ Break it down:
 
 ---
 
-## Step 2 — Identify problem
+Step 2 — Identify problem
 
 Common issue:
 - mixing detail + summary  
@@ -440,7 +440,7 @@ transaction_id not in GROUP BY
 
 ---
 
-## Step 3 — Fix instructions
+Step 3 — Fix instructions
 
 Add in Rules:
 For aggregated queries, do not return transaction_id or any row-level identifier.
