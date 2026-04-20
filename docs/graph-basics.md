@@ -52,7 +52,7 @@ Read it as:
 
 ### Direction Matters
 
-Relationships are **directional**.
+Relationships are **directional**
 ResaleTransaction → Location
 
 NOT:
@@ -106,6 +106,7 @@ Example of a basic GQL pattern:
 <img width="253" height="41" alt="image" src="https://github.com/user-attachments/assets/d29b8499-f201-4710-965c-82cf31f9e289" />
 <br>
 This means:
+
 - find transactions  
 - connected to locations  
 
