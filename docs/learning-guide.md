@@ -135,8 +135,7 @@ The structure defines the relationships.
 
 ## Key Difference
 
-SQL connects tables
-GQL follows relationships
+SQL connects tables. GQL follows relationships
 
 This is why ontology matters — it defines those relationships
 
