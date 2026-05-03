@@ -1,7 +1,5 @@
 # Beginner Lab Guide — Build and Debug a Fabric Data Agent
 
-<img width="1122" height="1402" alt="image" src="https://github.com/user-attachments/assets/ce281079-ed47-4966-93bb-7d353966d561" />
-
 This lab is designed for **learning by doing**. 
 
 - You will build an ontology and data agent  
@@ -11,8 +9,6 @@ This lab is designed for **learning by doing**.
 You are expected to need about 1 hour (or more) to complete the lab.
 
 ## Scope Note: Data Modelling Is Simplified
-
-<img width="1448" height="1086" alt="image" src="https://github.com/user-attachments/assets/d1ad79cc-72ac-4ed1-8cce-bbe91e2015fa" />
 
 In a real analytics project, the HDB resale dataset would normally require careful data modelling before it is used for reporting, semantic modelling, graph querying, or natural language querying.
 
@@ -165,8 +161,6 @@ This defines how tables connect:
 ---
 
 # Lab 4 — Generate Ontology
-
-<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/89b0a2b4-9db8-499b-821f-56e578786c8b" />
 
 ## Steps
 </br>
@@ -433,8 +427,6 @@ Try:
 ---
 
 # Lab 11 — Break It (Important)
-
-<img width="1448" height="1086" alt="image" src="https://github.com/user-attachments/assets/0ae1e84c-ccc7-4f0e-b502-711e04ceaf95" />
 
 Try:
 
