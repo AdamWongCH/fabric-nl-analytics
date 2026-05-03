@@ -673,40 +673,32 @@ Use this workflow whenever something breaks.
 
 Use this template when documenting an issue.
 
-```markdown
-## Issue
-
+```text
+Issue:
 Describe the failed question.
 
-## Failed question
-
-```text
+Failed question:
 average resale price in BEDOK in January
-```
 
-## Error message
-
+Error message:
 Paste the error message.
 
-## Expected behaviour
-
+Expected behaviour:
 Describe what should have happened.
 
-## Diagnosis
-
+Diagnosis:
 - Entity:
 - Filter:
 - Relationship path:
 - Operation:
 - Return fields:
 
-## Fix
-
+Fix:
 Describe what you changed.
 
-## Retest result
-
+Retest result:
 Describe whether the query now works.
+```
 
 ---
 
