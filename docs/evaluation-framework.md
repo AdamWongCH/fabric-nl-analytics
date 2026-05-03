@@ -458,4 +458,4 @@ Before sharing the agent with others, check:
 
 Continue to the advanced labs:
 
-[`/labs/lab-advanced-nl2gql.md`](../labs/lab-advanced-nl2gql.md)
+[`/labs/lab-02-advanced-nl2gql.md`](../labs/lab-02-advanced-nl2gql.md)
