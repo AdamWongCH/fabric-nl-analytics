@@ -16,6 +16,14 @@ You will learn how data is transformed from raw tables into meaningful structure
 
 ---
 
+## How This Repo Is Organised
+
+This repo is organised into a **Beginner Track** and an **Advanced Track**.
+
+Start with the **Beginner Track** if this is your first time using Fabric IQ ontology and data agents.
+
+---
+
 ## Learning Outcomes
 
 By the end of the beginner track, you should be able to:
@@ -107,15 +115,15 @@ Use these labs after completing the beginner lab.
 
 1. **Advanced NL2GQL Lab**  
    Practise breaking natural language questions into entity, filter, relationship path, operation, and expected GQL shape.  
-   [`/labs/lab-advanced-nl2gql.md`](./labs/lab-advanced-nl2gql.md)
+   [`/labs/lab-02-advanced-nl2gql.md`](./labs/lab-02-advanced-nl2gql.md)
 
 2. **Debugging Agent Errors Lab**  
    Practise reading failed queries and improving ontology or agent instructions.  
-   [`/labs/lab-debugging-agent-errors.md`](./labs/lab-debugging-agent-errors.md)
+   [`/labs/lab-03-debugging-agent-errors.md`](./labs/lab-03-debugging-agent-errors.md)
 
 3. **Agent Evaluation Lab**  
    Build a small benchmark of test questions and score the agent’s behaviour.  
-   [`/labs/lab-agent-evaluation.md`](./labs/lab-agent-evaluation.md)
+   [`/labs/lab-04-agent-evaluation.md`](./labs/lab-04-agent-evaluation.md)
 
 ---
 
