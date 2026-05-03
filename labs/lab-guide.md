@@ -54,11 +54,12 @@ Think in layers:
 
 ## Tables to create
 
-- fact_resale_transaction  
-- dim_location  
-- dim_date  
-- dim_flat  
-- dim_lease  
+For the beginner lab, include only 3 tables first:
+- fact_resale_transaction
+- dim_location
+- dim_date
+
+The Flat and Lease tables are provided for optional enrichment later.
 
 ---
 
@@ -114,7 +115,7 @@ This is what the ontology builds on
 
 ---
 
-# Lab 3 — Define Relationships (Sementic Model)
+# Lab 3 — Define Relationships (Semantic Model)
 
 ## Create relationships
 
@@ -206,6 +207,16 @@ SaleMonth:
 
 ---
 
+## Checkpoint
+
+Before moving on, confirm:
+
+- ResaleTransaction has `transaction_id` as key
+- Location has `location_key` as key
+- SaleMonth has `date_key` as key
+  
+---
+
 ## Screenshot
 Entity properties showing key selection
 
@@ -235,7 +246,9 @@ ResaleTransaction → sold_in → SaleMonth
 
 ---
 
-## Check
+## Checkpoint
+
+Before moving on, confirm:
 
 - names read naturally  
 - mapping is correct  
@@ -281,6 +294,16 @@ Example:
 1. Open each entity  
 2. Verify properties are mapped correctly  
 3. Ensure relationship keys align
+
+---
+
+## Checkpoint
+
+Before creating the data agent, confirm:
+
+- `resale_price` is bound to the transaction table
+- `town` is bound to the location table
+- relationship keys align correctly
 
 ---
 
@@ -331,6 +354,7 @@ The agent is the interface between:
 
 Copy and paste:
 
+```text
 You are a data agent that answers questions about Singapore housing resale transactions.
 
 Keep answers short, sharp, and concise.
@@ -359,6 +383,7 @@ Rules:
 - For detail questions, return row-level identifiers and measures without aggregation.
 - Prefer business wording over technical column names.
 - Mention SGD for prices and sqm for area.
+```
 
 ---
 
@@ -420,7 +445,7 @@ This causes invalid queries
 
 # Lab 12 — Debug It
 
-Step 1 — Think like the agent
+## Step 1 — Think like the agent
 
 Break it down:
 
@@ -430,21 +455,22 @@ Break it down:
 
 ---
 
-Step 2 — Identify problem
+## Step 2 — Identify the problem
 
 Common issue:
 - mixing detail + summary  
 
 Error:
-transaction_id not in GROUP BY  
+`transaction_id not in GROUP BY`
 
 ---
 
-Step 3 — Fix instructions
+## Step 3 — Fix the instructions
 
-Add in Rules:
-For aggregated queries, do not return transaction_id or any row-level identifier.
+Add this rule:
 
+```text
+For aggregated queries, do not return transaction_id or any row-level identifier unless grouped.
 
 ---
 
