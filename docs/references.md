@@ -115,7 +115,7 @@ ISO/IEC 39075:2024 defines data structures and operations for property graphs an
 
 ---
 
-## NL2GQL and Natural Language Querying over Graphs
+## NL2GQL and Text-to-Graph Query Generation
 
 These references are useful for the advanced track, especially for understanding how natural language questions are translated into graph queries.
 
@@ -138,10 +138,6 @@ These references are useful for the advanced track, especially for understanding
 - Jia, Y. et al. (2025). **Text-to-graph query using semantic subgraph retrieval**. *Knowledge-Based Systems*.  
   Useful for retrieval-augmented text-to-graph query generation.  
   Link: https://www.sciencedirect.com/science/article/abs/pii/S0950705125022452
-
-- Liang, S. et al. (2021). **Querying Knowledge Graphs in Natural Language**.  
-  Useful for background on natural language question answering over knowledge graphs.  
-  Link: https://www.research-collection.ethz.ch/handle/20.500.11850/510242
 
 ---
 
