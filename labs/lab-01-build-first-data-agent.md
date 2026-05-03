@@ -166,6 +166,8 @@ This defines how tables connect:
 
 # Lab 4 — Generate Ontology
 
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/89b0a2b4-9db8-499b-821f-56e578786c8b" />
+
 ## Steps
 </br>
 1. Generate ontology from semantic model
