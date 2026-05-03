@@ -163,6 +163,6 @@ Instead, it uses them to support a practical learning progression from ontology 
 
 The central idea of this repo is:
 
-> Structure enables AI to reason over data.
+> Structure enables AI to reason over data more reliably.
 
-The references above provide the official and technical background for that idea.
+In this repo, “structure” refers to ontology, graph relationships, clear data descriptions, governed examples, and query patterns. These structures help reduce ambiguity when users ask questions in natural language.
