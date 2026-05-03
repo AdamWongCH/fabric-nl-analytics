@@ -59,7 +59,7 @@ Follow this sequence:
    [`/docs/glossary.md`](./docs/glossary.md)
 
 4. **Build and try it yourself**  
-   [`/labs/lab-guide.md`](./labs/lab-guide.md)
+   [`/labs/lab-01-build-first-data-agent.md`](./labs/lab-01-build-first-data-agent.md)
 
 5. **Consolidate your understanding**  
    [`/docs/summary.md`](./docs/summary.md)
