@@ -117,7 +117,18 @@ ISO/IEC 39075:2024 defines data structures and operations for property graphs an
 
 ## NL2GQL and Text-to-Graph Query Generation
 
-These references are useful for the advanced track, especially for understanding how natural language questions are translated into graph queries.
+NL2GQL refers to the task of translating natural language questions into graph query language.  
+In this repo, NL2GQL is used as an advanced learning concept rather than as a claim that Fabric currently exposes a dedicated “NL2GQL” feature by that name.
+
+The practical idea is that a natural-language graph question usually requires several steps:
+
+1. Understanding the user’s intent.
+2. Identifying relevant entities and relationships.
+3. Aligning the question with the graph schema or ontology.
+4. Generating a valid graph query.
+5. Checking, refining, and explaining the result.
+
+These references are useful for the advanced track, especially for understanding how natural language questions can be translated into graph queries.
 
 - Zhou, Y. et al. (2024). **R³-NL2GQL: A Model Coordination and Knowledge Graph Alignment Approach for NL2GQL**. *Findings of EMNLP 2024*.  
   Useful for understanding ranking, rewriting, refinement, and schema alignment in NL2GQL.  
