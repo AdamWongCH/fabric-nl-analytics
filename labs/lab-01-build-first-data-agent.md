@@ -1,5 +1,7 @@
 # Beginner Lab Guide — Build and Debug a Fabric Data Agent
 
+<img width="1122" height="1402" alt="image" src="https://github.com/user-attachments/assets/ce281079-ed47-4966-93bb-7d353966d561" />
+
 This lab is designed for **learning by doing**. 
 
 - You will build an ontology and data agent  
