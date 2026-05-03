@@ -1,43 +1,32 @@
 # Advanced Lab — NL2GQL Reasoning
 
-This lab helps you understand how natural language questions are translated into graph query logic.
+This lab helps you practise the framework introduced in:
 
-You are not writing perfect GQL from memory.
+[`/docs/advanced-nl2gql.md`](../docs/advanced-nl2gql.md)
 
-You are learning to reason through the translation.
+The goal is not to memorise GQL syntax.
+
+The goal is to break natural language questions into structured query logic.
 
 ---
 
 ## Goal
 
-By the end of this lab, you should be able to break a natural language question into:
+By the end of this lab, you should be able to identify:
 
 - intent
 - entity
 - filters
 - relationship path
 - operation
+- return fields
 - expected result type
 
 This helps you debug data-agent behaviour more systematically.
 
 ---
 
-## Core Idea
-
-NL2GQL means:
-
-```text
-Natural Language → Graph Query Language
-```
-
-A data agent must translate a user question into structured query logic.
-
-The better the ontology and instructions, the better this translation becomes.
-
----
-
-## Translation Framework
+## Framework
 
 Use this framework for every question:
 
@@ -48,6 +37,7 @@ Use this framework for every question:
 | Filters | What conditions apply? |
 | Relationship path | How do the entities connect? |
 | Operation | What calculation or result is needed? |
+| Return fields | What should be returned? |
 | Expected result type | Single value, grouped summary, detail records, or comparison? |
 
 ---
@@ -83,7 +73,7 @@ ResaleTransaction → sold_in → SaleMonth
 
 ---
 
-## Example Walkthrough
+## Worked Example
 
 ### Question
 
@@ -99,14 +89,15 @@ What is the average resale price in Bedok?
 |---|---|
 | Intent | Find average price |
 | Entity | ResaleTransaction |
-| Filter | Location.town = BEDOK |
+| Filters | Location.town = BEDOK |
 | Relationship path | ResaleTransaction → located_at → Location |
 | Operation | AVG(resale_price) |
+| Return fields | avg_resale_price |
 | Expected result type | Single aggregated value |
 
 ---
 
-### Expected GQL Shape
+### Expected Query Logic
 
 ```text
 MATCH transaction connected to location
@@ -114,9 +105,17 @@ FILTER town = BEDOK
 RETURN average resale price
 ```
 
-You do not need exact syntax at this stage.
+You do not need exact GQL syntax at this stage.
 
 Focus on the logic.
+
+---
+
+# Practice Tasks
+
+Complete the “Your Breakdown” table first.
+
+Then compare your answer with the expected answer.
 
 ---
 
@@ -136,9 +135,10 @@ What is the average resale price in Tampines?
 |---|---|
 | Intent |  |
 | Entity |  |
-| Filter |  |
+| Filters |  |
 | Relationship path |  |
 | Operation |  |
+| Return fields |  |
 | Expected result type |  |
 
 ---
@@ -149,9 +149,10 @@ What is the average resale price in Tampines?
 |---|---|
 | Intent | Find average price |
 | Entity | ResaleTransaction |
-| Filter | Location.town = TAMPINES |
+| Filters | Location.town = TAMPINES |
 | Relationship path | ResaleTransaction → located_at → Location |
 | Operation | AVG(resale_price) |
+| Return fields | avg_resale_price |
 | Expected result type | Single aggregated value |
 
 ---
@@ -172,10 +173,11 @@ What is the number of transactions by town?
 |---|---|
 | Intent |  |
 | Entity |  |
-| Filter |  |
+| Filters |  |
 | Grouping |  |
 | Relationship path |  |
 | Operation |  |
+| Return fields |  |
 | Expected result type |  |
 
 ---
@@ -186,10 +188,11 @@ What is the number of transactions by town?
 |---|---|
 | Intent | Count transactions |
 | Entity | ResaleTransaction |
-| Filter | None |
+| Filters | None |
 | Grouping | Location.town |
 | Relationship path | ResaleTransaction → located_at → Location |
 | Operation | COUNT(ResaleTransaction) |
+| Return fields | Location.town, transaction_count |
 | Expected result type | Grouped summary |
 
 ---
@@ -210,9 +213,10 @@ What is the average resale price in January?
 |---|---|
 | Intent |  |
 | Entity |  |
-| Filter |  |
+| Filters |  |
 | Relationship path |  |
 | Operation |  |
+| Return fields |  |
 | Expected result type |  |
 
 ---
@@ -223,9 +227,10 @@ What is the average resale price in January?
 |---|---|
 | Intent | Find average price |
 | Entity | ResaleTransaction |
-| Filter | SaleMonth.month_name = January |
+| Filters | SaleMonth.month_name = January |
 | Relationship path | ResaleTransaction → sold_in → SaleMonth |
 | Operation | AVG(resale_price) |
+| Return fields | avg_resale_price |
 | Expected result type | Single aggregated value |
 
 ---
@@ -249,6 +254,7 @@ What is the average resale price in Bedok in January?
 | Filters |  |
 | Relationship paths |  |
 | Operation |  |
+| Return fields |  |
 | Expected result type |  |
 
 ---
@@ -262,6 +268,7 @@ What is the average resale price in Bedok in January?
 | Filters | Location.town = BEDOK; SaleMonth.month_name = January |
 | Relationship paths | ResaleTransaction → located_at → Location; ResaleTransaction → sold_in → SaleMonth |
 | Operation | AVG(resale_price) |
+| Return fields | avg_resale_price |
 | Expected result type | Single aggregated value |
 
 ---
@@ -286,6 +293,7 @@ Which town is cheaper, Bedok or Tampines?
 | Grouping |  |
 | Relationship path |  |
 | Operation |  |
+| Return fields |  |
 | Expected result type |  |
 
 ---
@@ -300,6 +308,7 @@ Which town is cheaper, Bedok or Tampines?
 | Grouping | Location.town |
 | Relationship path | ResaleTransaction → located_at → Location |
 | Operation | AVG(resale_price), compare lower value |
+| Return fields | Location.town, avg_resale_price |
 | Expected result type | Comparison between two grouped averages |
 
 ---
@@ -320,9 +329,10 @@ Show transactions in Bedok
 |---|---|
 | Intent |  |
 | Entity |  |
-| Filter |  |
+| Filters |  |
 | Relationship path |  |
 | Operation |  |
+| Return fields |  |
 | Expected result type |  |
 
 ---
@@ -333,14 +343,15 @@ Show transactions in Bedok
 |---|---|
 | Intent | Show transaction records |
 | Entity | ResaleTransaction |
-| Filter | Location.town = BEDOK |
+| Filters | Location.town = BEDOK |
 | Relationship path | ResaleTransaction → located_at → Location |
 | Operation | None |
+| Return fields | transaction_id, resale_price, town, sale month |
 | Expected result type | Row-level detail records |
 
 ---
 
-## Important Distinction
+# Important Distinction
 
 Summary questions and detail questions should return different outputs.
 
@@ -362,7 +373,7 @@ That can cause a GROUP BY error.
 
 ---
 
-## Challenge — Predict the Failure
+# Challenge — Predict the Failure
 
 ### Question
 
@@ -378,7 +389,7 @@ transaction_id, location_key, AVG(resale_price)
 
 ---
 
-### Questions
+## Questions
 
 1. What did the agent get right?
 2. What did the agent get wrong?
@@ -387,7 +398,7 @@ transaction_id, location_key, AVG(resale_price)
 
 ---
 
-### Suggested Answer
+## Suggested Answer
 
 The agent likely got these right:
 
@@ -411,7 +422,7 @@ For aggregated queries, do not return transaction_id or any row-level identifier
 
 ---
 
-## Reflection
+# Reflection
 
 Think about:
 
@@ -423,7 +434,7 @@ Think about:
 
 ---
 
-## Key Learning
+# Key Learning
 
 NL2GQL is not magic.
 
@@ -437,7 +448,7 @@ Better ontology design and clearer instructions improve this translation.
 
 ---
 
-## Next Step
+# Next Step
 
 Continue to:
 
