@@ -143,16 +143,19 @@ These references are useful for the advanced track, especially for understanding
 
 ## How These References Relate to This Repo
 
-This repo simplifies the above materials into a guided learning path.
+This repo simplifies the above materials into a guided learning path.  
+It does not attempt to reproduce the full official documentation or research literature.  
+Instead, it uses them to support a practical learning progression from ontology design to graph querying and natural-language querying.
 
-| Repo concept | Related source |
-|---|---|
-| Ontology | Fabric IQ ontology documentation |
-| Data agent | Fabric data agent documentation |
-| Graph concepts | Fabric Graph documentation |
-| GQL | Fabric GQL Language Guide and ISO/IEC 39075 |
-| NL2GQL | Fabric Graph and data agent documentation |
-| Debugging query failures | GQL and data agent documentation |
+| Repo concept | Related source | How it is used in this repo |
+|---|---|---|
+| Ontology | Fabric IQ ontology documentation | Used to explain how business entities, properties, relationships, and bindings create a shared semantic layer. |
+| Data agent | Fabric data agent documentation | Used to explain how users can ask questions about data in natural language without writing SQL, DAX, KQL, or graph queries directly. |
+| Graph concepts | Fabric Graph documentation | Used to introduce connected data, nodes, relationships, and graph-based analysis. |
+| GQL | Fabric GQL Language Guide and ISO/IEC 39075 | Used to teach the basic query patterns needed to retrieve and reason over connected data. |
+| NL2GQL | NL2GQL and text-to-graph-query research papers | Used in the advanced track to explain how natural language questions may be translated into graph queries through schema understanding, query generation, validation, and refinement. |
+| Query examples and evaluation | Fabric data agent examples and evaluation documentation | Used to show why example questions, expected outputs, testing, and evaluation are important when building reliable natural-language data experiences. |
+| Debugging query failures | GQL documentation, data agent documentation, and NL2GQL research | Used to explain common failure points such as unclear user questions, weak schema descriptions, missing relationships, incorrect filters, invalid query patterns, and unsupported assumptions. |
 
 ---
 
