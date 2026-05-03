@@ -434,6 +434,8 @@ Try:
 
 # Lab 11 — Break It (Important)
 
+<img width="1448" height="1086" alt="image" src="https://github.com/user-attachments/assets/0ae1e84c-ccc7-4f0e-b502-711e04ceaf95" />
+
 Try:
 
 > average resale price in BEDOK in January
