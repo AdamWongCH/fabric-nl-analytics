@@ -104,3 +104,11 @@ Now that you understand the basics, you can:
 If everything worked perfectly… you might want to break it again 😄
 
 That is where the real learning happens.
+
+---
+
+## Further Reading
+
+See the references page for official Microsoft and GQL documentation:
+
+[`/docs/references.md`](./references.md)
