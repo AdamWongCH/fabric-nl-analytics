@@ -707,7 +707,6 @@ Describe what you changed.
 ## Retest result
 
 Describe whether the query now works.
-```
 
 ---
 
