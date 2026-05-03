@@ -24,6 +24,16 @@ Start with the **Beginner Track** if this is your first time using Fabric IQ ont
 
 ---
 
+## Important Note: Natural Language Querying Is Not Magic
+
+Natural language querying works best when the underlying data is well structured, clearly described, and aligned with the questions users are likely to ask.
+
+This repo uses ontology, graph relationships, GQL, and data agents to show how structured data can be explored through natural language. However, AI does not replace good data modelling. It depends on it.
+
+For teaching purposes, this repo does not fully cover the process of converting the HDB resale dataset into a dimensional fact-and-dimension model. Instead, it uses a simplified prepared dataset so learners can focus on ontology, graph querying, and natural language querying concepts.
+
+---
+
 ## Learning Outcomes
 
 By the end of the beginner track, you should be able to:
