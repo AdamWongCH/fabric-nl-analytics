@@ -8,6 +8,20 @@ This lab is designed for **learning by doing**.
 
 You are expected to need about 1 hour (or more) to complete the lab.
 
+## Scope Note: Data Modelling Is Simplified
+
+In a real analytics project, the HDB resale dataset would normally require careful data modelling before it is used for reporting, semantic modelling, graph querying, or natural language querying.
+
+This lab does not focus on converting the dataset into a full dimensional fact-and-dimension schema. That step is simplified so that learners can concentrate on:
+
+- identifying entities and relationships,
+- understanding ontology,
+- writing basic GQL,
+- using a data agent, and
+- seeing how structure improves natural language querying.
+
+This shortcut should not be interpreted as a recommendation to skip data modelling in real projects.
+
 ---
 
 # Goal
