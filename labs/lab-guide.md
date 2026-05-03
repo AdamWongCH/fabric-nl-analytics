@@ -471,6 +471,7 @@ Add this rule:
 
 ```text
 For aggregated queries, do not return transaction_id or any row-level identifier unless grouped.
+```
 
 ---
 
