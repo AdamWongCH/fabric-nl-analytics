@@ -1,6 +1,6 @@
 # Advanced NL2GQL — From Questions to Graph Queries
 
-This page explains how natural language questions are translated into GQL-style graph queries.
+This page explains how natural language questions are translated into graph query logic.
 
 NL2GQL means:
 
@@ -26,16 +26,34 @@ For example:
 average resale price in Bedok
 ```
 
-must be translated into:
+must be translated into something like:
 
 ```text
 Entity → ResaleTransaction
 Filter → Location.town = BEDOK
 Relationship path → ResaleTransaction → located_at → Location
 Operation → AVG(resale_price)
+Return field → avg_resale_price
 ```
 
 This is the core of NL2GQL.
+
+---
+
+## Research Context
+
+NL2GQL is an emerging area related to natural language interfaces for graph databases and knowledge graphs.
+
+Recent work highlights that translating natural language into graph queries is not just a simple prompt-to-query task. It often involves:
+
+- identifying user intent
+- linking terms to entities and properties
+- selecting relationship paths
+- generating graph query logic
+- using execution feedback to refine failed queries
+- evaluating whether the generated query matches the intended question
+
+This is why ontology structure, relationship naming, binding, and data agent instructions matter.
 
 ---
 
@@ -45,7 +63,7 @@ When a user asks a question, the system needs to identify:
 
 1. **Intent** — what is the user asking for?
 2. **Entity** — what is the main object being queried?
-3. **Filter** — what conditions apply?
+3. **Filters** — what conditions apply?
 4. **Relationship path** — how do entities connect?
 5. **Operation** — what calculation or result is needed?
 6. **Return fields** — what should be returned?
@@ -72,6 +90,10 @@ GQL
 Answer
 ```
 
+This page repeats this framework across different examples on purpose.
+
+The goal is to show that most NL2GQL problems can be diagnosed using the same structure.
+
 ---
 
 ## Example 1 — Simple Filter and Aggregation
@@ -84,53 +106,16 @@ What is the average resale price in Bedok?
 
 ---
 
-### Step 1 — Identify the intent
+### Breakdown
 
-The user wants a summary statistic.
-
-```text
-Intent → average price
-```
-
----
-
-### Step 2 — Identify the entity
-
-The question is about resale transactions.
-
-```text
-Entity → ResaleTransaction
-```
-
----
-
-### Step 3 — Identify the filter
-
-“Bedok” refers to a town.
-
-```text
-Filter → Location.town = BEDOK
-```
-
----
-
-### Step 4 — Identify the relationship path
-
-Transactions must connect to locations.
-
-```text
-Relationship path → ResaleTransaction → located_at → Location
-```
-
----
-
-### Step 5 — Identify the operation
-
-“Average resale price” maps to:
-
-```text
-Operation → AVG(resale_price)
-```
+| Component | Mapping |
+|---|---|
+| Intent | Find average price |
+| Entity | ResaleTransaction |
+| Filter | Location.town = BEDOK |
+| Relationship path | ResaleTransaction → located_at → Location |
+| Operation | AVG(resale_price) |
+| Return field | avg_resale_price |
 
 ---
 
@@ -167,21 +152,16 @@ What is the average resale price in January?
 
 ---
 
-### Mapping
+### Breakdown
 
-| User phrase | Ontology mapping |
+| Component | Mapping |
 |---|---|
-| average resale price | AVG(resale_price) |
-| January | SaleMonth.month_name |
-| transactions | ResaleTransaction |
-
----
-
-### Relationship path
-
-```text
-ResaleTransaction → sold_in → SaleMonth
-```
+| Intent | Find average price |
+| Entity | ResaleTransaction |
+| Filter | SaleMonth.month_name = January |
+| Relationship path | ResaleTransaction → sold_in → SaleMonth |
+| Operation | AVG(resale_price) |
+| Return field | avg_resale_price |
 
 ---
 
@@ -218,22 +198,18 @@ This is more difficult because the agent must use two filters from two different
 
 ---
 
-### Mapping
+### Breakdown
 
-| User phrase | Ontology mapping |
+| Component | Mapping |
 |---|---|
-| average resale price | AVG(resale_price) |
-| Tampines | Location.town = TAMPINES |
-| January | SaleMonth.month_name = January |
-
----
-
-### Relationship paths
-
-```text
-ResaleTransaction → located_at → Location
-ResaleTransaction → sold_in → SaleMonth
-```
+| Intent | Find average price |
+| Entity | ResaleTransaction |
+| Filter 1 | Location.town = TAMPINES |
+| Filter 2 | SaleMonth.month_name = January |
+| Relationship path 1 | ResaleTransaction → located_at → Location |
+| Relationship path 2 | ResaleTransaction → sold_in → SaleMonth |
+| Operation | AVG(resale_price) |
+| Return field | avg_resale_price |
 
 ---
 
@@ -268,7 +244,7 @@ It is about designing the structure that allows questions to be translated corre
 
 ## Common NL2GQL Failure Patterns
 
-### 1. Wrong entity mapping
+### 1. Wrong Entity Mapping
 
 Question:
 
@@ -297,7 +273,7 @@ Fix:
 
 ---
 
-### 2. Wrong filter mapping
+### 2. Wrong Filter Mapping
 
 Question:
 
@@ -321,7 +297,7 @@ Normalize town names to uppercase before querying.
 
 ---
 
-### 3. Missing relationship path
+### 3. Missing Relationship Path
 
 Question:
 
@@ -347,7 +323,7 @@ Fix:
 
 ---
 
-### 4. Mixing detail and summary
+### 4. Mixing Detail and Summary
 
 Bad generated query:
 
@@ -379,7 +355,7 @@ Detail queries may return row-level identifiers.
 
 ---
 
-### 5. Wrong return fields
+### 5. Wrong Return Fields
 
 Question:
 
@@ -444,7 +420,7 @@ Bedok → Location.town = BEDOK
 
 ---
 
-### 3. Relationship path
+### 3. Relationship Path
 
 Ask:
 
@@ -476,7 +452,7 @@ average → AVG(resale_price)
 
 ---
 
-### 5. Return fields
+### 5. Return Fields
 
 Ask:
 
@@ -506,7 +482,9 @@ A strong instruction block should define:
 - business term mappings
 - normalization rules
 - aggregation rules
+- grouping rules
 - error-prevention rules
+- response rules
 
 ---
 
@@ -516,6 +494,7 @@ A strong instruction block should define:
 You are a data agent that answers questions about Singapore housing resale transactions.
 
 Use only data from HousingResaleOntology.
+Do not use outside knowledge.
 
 Entity meanings:
 - ResaleTransaction = one HDB resale transaction
@@ -540,127 +519,17 @@ Aggregation rules:
 - average price -> AVG(resale_price)
 - total price -> SUM(resale_price)
 - number of transactions -> COUNT(ResaleTransaction)
-- summary queries should return only grouped fields and aggregated measures
+
+Grouping rules:
+- by town -> group by Location.town
+- by month -> group by SaleMonth.month_name
 
 Error prevention:
 - Do not return transaction_id or other row-level identifiers in aggregated queries.
-- If a question is ambiguous, choose the closest business interpretation based on the ontology.
+- Summary queries should return only grouped fields and aggregated measures.
+- Detail queries may return row-level identifiers and measures without aggregation.
 - Support group by in GQL.
 ```
-
----
-
-## Practice Exercise
-
-For each question, identify:
-
-1. entity
-2. filters
-3. relationship path
-4. operation
-5. expected result type
-
----
-
-### Question 1
-
-```text
-What is the average resale price in Bedok?
-```
-
----
-
-### Question 2
-
-```text
-What is the number of transactions by town?
-```
-
----
-
-### Question 3
-
-```text
-What is the average resale price by month?
-```
-
----
-
-### Question 4
-
-```text
-What is the average resale price in Tampines in January?
-```
-
----
-
-### Question 5
-
-```text
-Which flat type has the highest average resale price?
-```
-
----
-
-## Answer Guide
-
-### Question 1
-
-| Component | Mapping |
-|---|---|
-| Entity | ResaleTransaction |
-| Filter | Location.town = BEDOK |
-| Relationship path | ResaleTransaction → located_at → Location |
-| Operation | AVG(resale_price) |
-| Expected result type | Single aggregated value |
-
----
-
-### Question 2
-
-| Component | Mapping |
-|---|---|
-| Entity | ResaleTransaction |
-| Grouping | Location.town |
-| Relationship path | ResaleTransaction → located_at → Location |
-| Operation | COUNT(ResaleTransaction) |
-| Expected result type | Grouped summary |
-
----
-
-### Question 3
-
-| Component | Mapping |
-|---|---|
-| Entity | ResaleTransaction |
-| Grouping | SaleMonth.month_name |
-| Relationship path | ResaleTransaction → sold_in → SaleMonth |
-| Operation | AVG(resale_price) |
-| Expected result type | Grouped summary |
-
----
-
-### Question 4
-
-| Component | Mapping |
-|---|---|
-| Entity | ResaleTransaction |
-| Filters | Location.town = TAMPINES; SaleMonth.month_name = January |
-| Relationship paths | ResaleTransaction → located_at → Location; ResaleTransaction → sold_in → SaleMonth |
-| Operation | AVG(resale_price) |
-| Expected result type | Single aggregated value |
-
----
-
-### Question 5
-
-| Component | Mapping |
-|---|---|
-| Entity | ResaleTransaction |
-| Grouping | Flat.flat_type |
-| Relationship path | ResaleTransaction → for_flat → Flat |
-| Operation | AVG(resale_price), sorted descending |
-| Expected result type | Ranked grouped summary |
 
 ---
 
@@ -669,6 +538,7 @@ Which flat type has the highest average resale price?
 - NL2GQL translates natural language into graph query logic.
 - The quality of NL2GQL depends on ontology quality.
 - Good relationship names make query generation easier.
+- Correct binding makes the ontology usable.
 - Clear instructions reduce query errors.
 - Most failures can be debugged by checking entity, filter, relationship path, operation, and return fields.
 
