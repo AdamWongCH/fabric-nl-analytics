@@ -119,23 +119,29 @@ ISO/IEC 39075:2024 defines data structures and operations for property graphs an
 
 These references are useful for the advanced track, especially for understanding how natural language questions are translated into graph queries.
 
-- Zhou, Y. et al. (2024). **R³-NL2GQL: A Model Coordination and Knowledge Graph Alignment Approach for NL2GQL**. Findings of EMNLP 2024.  
-  Useful for understanding ranking, rewriting, refinement, and schema alignment in NL2GQL.
+- Zhou, Y. et al. (2024). **R³-NL2GQL: A Model Coordination and Knowledge Graph Alignment Approach for NL2GQL**. *Findings of EMNLP 2024*.  
+  Useful for understanding ranking, rewriting, refinement, and schema alignment in NL2GQL.  
+  Link: https://aclanthology.org/2024.findings-emnlp.800/
 
-- Liang, Y. et al. (2024). **NAT-NL2GQL: A Novel Multi-Agent Framework for Translating Natural Language to Graph Query Language**. arXiv.  
-  Useful for understanding multi-agent NL2GQL pipelines with preprocessing, generation, and refinement.
+- Liang, Y. et al. (2024). **NAT-NL2GQL: A Novel Multi-Agent Framework for Translating Natural Language to Graph Query Language**. *arXiv*.  
+  Useful for understanding multi-agent NL2GQL pipelines with preprocessing, generation, and refinement.  
+  Link: https://arxiv.org/abs/2412.10434
 
 - Ozsoy, M. G. et al. (2025). **Text2Cypher: Bridging Natural Language and Graph Databases**.  
-  Useful as a related Text-to-Cypher reference for graph query generation.
+  Useful as a related Text-to-Cypher reference for graph query generation.  
+  Link: https://aclanthology.org/2025.genaik-1.11/
 
 - Ni, P. et al. (2024). **Knowledge Graph and Deep Learning-based Text-to-GQL Model for Intelligent Medical Consultation Chatbot**. *Information Systems Frontiers*.  
-  Useful for domain-specific Text-to-GQL and chatbot integration.
+  Useful for domain-specific Text-to-GQL and chatbot integration.  
+  Link: https://link.springer.com/article/10.1007/s10796-022-10295-0
 
 - Jia, Y. et al. (2025). **Text-to-graph query using semantic subgraph retrieval**. *Knowledge-Based Systems*.  
-  Useful for retrieval-augmented text-to-graph query generation.
+  Useful for retrieval-augmented text-to-graph query generation.  
+  Link: https://www.sciencedirect.com/science/article/abs/pii/S0950705125022452
 
 - Liang, S. et al. (2021). **Querying Knowledge Graphs in Natural Language**.  
-  Useful for background on natural language question answering over knowledge graphs.
+  Useful for background on natural language question answering over knowledge graphs.  
+  Link: https://www.research-collection.ethz.ch/handle/20.500.11850/510242
 
 ---
 
