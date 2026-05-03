@@ -115,6 +115,30 @@ ISO/IEC 39075:2024 defines data structures and operations for property graphs an
 
 ---
 
+## NL2GQL and Natural Language Querying over Graphs
+
+These references are useful for the advanced track, especially for understanding how natural language questions are translated into graph queries.
+
+- Zhou, Y. et al. (2024). **R³-NL2GQL: A Model Coordination and Knowledge Graph Alignment Approach for NL2GQL**. Findings of EMNLP 2024.  
+  Useful for understanding ranking, rewriting, refinement, and schema alignment in NL2GQL.
+
+- Liang, Y. et al. (2024). **NAT-NL2GQL: A Novel Multi-Agent Framework for Translating Natural Language to Graph Query Language**. arXiv.  
+  Useful for understanding multi-agent NL2GQL pipelines with preprocessing, generation, and refinement.
+
+- Ozsoy, M. G. et al. (2025). **Text2Cypher: Bridging Natural Language and Graph Databases**.  
+  Useful as a related Text-to-Cypher reference for graph query generation.
+
+- Ni, P. et al. (2024). **Knowledge Graph and Deep Learning-based Text-to-GQL Model for Intelligent Medical Consultation Chatbot**. *Information Systems Frontiers*.  
+  Useful for domain-specific Text-to-GQL and chatbot integration.
+
+- Jia, Y. et al. (2025). **Text-to-graph query using semantic subgraph retrieval**. *Knowledge-Based Systems*.  
+  Useful for retrieval-augmented text-to-graph query generation.
+
+- Liang, S. et al. (2021). **Querying Knowledge Graphs in Natural Language**.  
+  Useful for background on natural language question answering over knowledge graphs.
+
+---
+
 ## How These References Relate to This Repo
 
 This repo simplifies the above materials into a guided learning path.
