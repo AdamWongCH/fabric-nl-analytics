@@ -22,6 +22,8 @@ This repo is organised into a **Beginner Track** and an **Advanced Track**.
 
 Start with the **Beginner Track** if this is your first time using Fabric IQ ontology and data agents.
 
+<img width="1491" height="1055" alt="image" src="https://github.com/user-attachments/assets/f4383c3b-e9d4-4e37-b9c4-3967efae2d40" />
+
 ---
 
 ## Important Note: Natural Language Querying Is Not Magic
