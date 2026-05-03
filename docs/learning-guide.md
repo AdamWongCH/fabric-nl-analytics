@@ -407,4 +407,4 @@ If the answer is wrong or the query fails, check the structure first.
 Learning is best done through building — and fixing what breaks 😄
 
 Go to the lab:  
-[`/labs/lab-guide.md`](../labs/lab-guide.md)
+[`/labs/lab-01-build-first-data-agent.md`](../labs/lab-01-build-first-data-agent.md)
