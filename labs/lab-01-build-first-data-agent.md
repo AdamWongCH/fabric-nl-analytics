@@ -1,4 +1,4 @@
-# Lab Guide — Build & Debug a Data Agent
+# Beginner Lab Guide — Build and Debug a Fabric Data Agent
 
 This lab is designed for **learning by doing**. 
 
