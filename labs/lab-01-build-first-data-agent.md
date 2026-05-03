@@ -10,6 +10,8 @@ You are expected to need about 1 hour (or more) to complete the lab.
 
 ## Scope Note: Data Modelling Is Simplified
 
+<img width="1448" height="1086" alt="image" src="https://github.com/user-attachments/assets/d1ad79cc-72ac-4ed1-8cce-bbe91e2015fa" />
+
 In a real analytics project, the HDB resale dataset would normally require careful data modelling before it is used for reporting, semantic modelling, graph querying, or natural language querying.
 
 This lab does not focus on converting the dataset into a full dimensional fact-and-dimension schema. That step is simplified so that learners can concentrate on:
