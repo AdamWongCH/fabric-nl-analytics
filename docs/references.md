@@ -176,4 +176,10 @@ The central idea of this repo is:
 
 > Structure enables AI to reason over data more reliably.
 
+This does not mean that natural language querying is magic.
+
+Natural language querying, data agents, ontology, and graph querying still depend on good data foundations. These include clear data models, well-defined entities, meaningful relationships, trusted source data, and useful metadata.
+
 In this repo, “structure” refers to ontology, graph relationships, clear data descriptions, governed examples, and query patterns. These structures help reduce ambiguity when users ask questions in natural language.
+
+The references above provide the official and technical background for that idea.
