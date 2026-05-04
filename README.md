@@ -155,3 +155,19 @@ Together, these enable **self-service analytics using natural language**.
 
 ```text
 Data → Semantic Model → Ontology → Data Agent → Answers
+```
+
+## Author
+
+**Adam Wong Cheng Hun**
+
+---
+
+## License
+
+This repository uses a mixed-license model:
+
+- Learning materials and documentation are licensed under **CC BY-NC 4.0**.
+- Code, notebooks, scripts, SQL/GQL queries, and technical examples are licensed under the **MIT License**.
+
+See [LICENSE.md](LICENSE.md) for details.
